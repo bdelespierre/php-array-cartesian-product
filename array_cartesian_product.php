@@ -21,12 +21,3 @@ function array_cartesian_product(...$items): array
 
     return $result ?? [];
 }
-
-$values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
-$colors = ["Hearts", "Tiles", "Clovers", "Spades"];
-
-$cards  = array_map('implode', array_cartesian_product($values, ' of ', $colors));
-
-shuffle($cards);
-
-var_dump(array_pop($cards));
